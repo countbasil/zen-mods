@@ -1,0 +1,65 @@
+/* =============================================
+   Active Workspace Indicator — Zen Mod
+   Adds a visible indicator around the active
+   workspace button in the sidebar.
+   ============================================= */
+
+/* Fix: parent container clips box-shadow by default.
+   Setting overflow: visible allows the glow style
+   to extend beyond the container bounds.            */
+#zen-workspaces-button {
+  overflow: visible !important;
+}
+
+/* Base: apply border-radius and transition to
+   the active button regardless of style.            */
+#zen-workspaces-button .subviewbutton[active="true"] {
+  border-radius: var(--mod-active-workspace-indicator-radius, 6px) !important;
+  transition: outline 0.15s ease,
+              box-shadow 0.15s ease,
+              background-color 0.15s ease !important;
+}
+
+/* ── Style: Outline ──────────────────────────
+   Drawn with a negative offset so it sits flush
+   against the button edge as a clean square.        */
+@media (-moz-pref("mod.active-workspace-indicator.style", "outline")) {
+  #zen-workspaces-button .subviewbutton[active="true"] {
+    outline: 2px solid color-mix(
+      in srgb,
+      var(--mod-active-workspace-indicator-color, currentColor)
+        var(--mod-active-workspace-indicator-opacity, 100%),
+      transparent
+    ) !important;
+    outline-offset: -2px !important;
+  }
+}
+
+/* ── Style: Background tint ──────────────────
+   Fills behind the icon with a semi-transparent
+   color. Recommended opacity: 20–30%.              */
+@media (-moz-pref("mod.active-workspace-indicator.style", "background")) {
+  #zen-workspaces-button .subviewbutton[active="true"] {
+    background-color: color-mix(
+      in srgb,
+      var(--mod-active-workspace-indicator-color, currentColor)
+        var(--mod-active-workspace-indicator-opacity, 25%),
+      transparent
+    ) !important;
+  }
+}
+
+/* ── Style: Glow ─────────────────────────────
+   A soft box-shadow emanating outward.
+   Requires overflow: visible on the parent
+   (set above) to avoid clipping.                   */
+@media (-moz-pref("mod.active-workspace-indicator.style", "glow")) {
+  #zen-workspaces-button .subviewbutton[active="true"] {
+    box-shadow: 0 0 8px 3px color-mix(
+      in srgb,
+      var(--mod-active-workspace-indicator-color, currentColor)
+        var(--mod-active-workspace-indicator-opacity, 100%),
+      transparent
+    ) !important;
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "property": "mod.active-workspace-indicator.style",
+    "label": "Indicator style",
+    "type": "dropdown",
+    "defaultValue": "outline",
+    "options": [
+      { "label": "Outline",          "value": "outline"     },
+      { "label": "Background tint",  "value": "background"  },
+      { "label": "Glow",             "value": "glow"        }
+    ]
+  },
+  {
+    "property": "mod.active-workspace-indicator.color",
+    "label": "Indicator color (any CSS color: #fff, oklch(…), etc.)",
+    "type": "string",
+    "defaultValue": "currentColor",
+    "placeholder": "e.g. #ffffff or oklch(0.8 0.15 250)"
+  },
+  {
+    "property": "mod.active-workspace-indicator.opacity",
+    "label": "Opacity (as a CSS percentage — lower = more transparent)",
+    "type": "string",
+    "defaultValue": "100%",
+    "placeholder": "e.g. 80% — for Background style try 20–30%"
+  },
+  {
+    "property": "mod.active-workspace-indicator.radius",
+    "label": "Corner radius",
+    "type": "string",
+    "defaultValue": "6px",
+    "placeholder": "e.g. 4px or 50%"
+  }
+]
