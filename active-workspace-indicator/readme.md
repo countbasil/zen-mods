@@ -6,7 +6,7 @@ Adds a visible indicator around the currently active workspace button in Zen's s
 
 | Setting | Description | Default |
 |---|---|---|
-| **Indicator style** | `Outline` / `Border` / `Background tint` / `Glow` | Outline |
+| **Indicator style** | `Outline` / `Background tint` / `Glow` | Outline |
 | **Indicator color** | Any valid CSS color (`#fff`, `oklch(…)`, `cornflowerblue`, etc.) | `currentColor` (follows your workspace theme) |
 | **Opacity** | A CSS percentage controlling indicator intensity | `100%` |
 | **Corner radius** | Border radius of the indicator | `6px` |
@@ -14,7 +14,6 @@ Adds a visible indicator around the currently active workspace button in Zen's s
 ## Style guide
 
 - **Outline** — drawn *outside* the element box, so it never shifts the sidebar layout. Fully opaque by default.
-- **Border** — drawn *inside* the element box with `box-sizing: border-box` to prevent size shifts. Similar to outline but renders slightly inward.
 - **Background tint** — fills behind the workspace icon. Works best with a low opacity (20–30%); 100% gives a fully solid fill.
 - **Glow** — a soft `box-shadow` emanating outward. Does not affect layout.
 
