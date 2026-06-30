@@ -1,3 +1,5 @@
+> ⚠️ **Alpha / Testing** — This mod is newly published and undergoing real-world testing. 
+
 # Active Workspace Indicator
 
 Adds a visible indicator around the currently active workspace button in Zen's sidebar, so you always know at a glance which workspace you're in.
